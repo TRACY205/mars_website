@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Mars Logistics</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background: url('images/log7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    background: rgba(0,64,128,0.9);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header .logo {
+    height: 50px;
+  }
+
+  /* Nav */
+  #nav-menu {
+    display: flex;
+    gap: 20px;
+  }
+  #nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  #nav-menu a:hover {
+    color: #c4e1ff;
+  }
+
+  /* Hamburger */
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    background-color: transparent;
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
+
+  h1 {
+    text-align:center;
+    color:#004080;
+    margin-bottom: 40px;
+    font-size: 2em;
+  }
+
+  /* Tab-like office header */
+  .office-tabs {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .office-tab {
+    padding: 12px 25px;
+    background: #c4e1ff;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #004080;
+    transition: all 0.3s;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .office-tab.active {
+    background: #004080;
+    color: white;
+  }
+  .office-tab:hover {
+    background: #0066cc;
+    color: white;
+  }
+
+  /* Office details */
+  .office-details {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    background: #fff;
+    border-radius: 0 12px 12px 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: none;
+  }
+  .office-details p { margin: 5px 0; }
+  .office-details iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  .contact-form h2 { text-align: center; color:#004080; margin-bottom: 20px; }
+  label { display:block; margin-top: 15px; font-weight: bold; }
+  input, textarea {
+    width: 100%; padding: 10px; border-radius: 8px;
+    border: 1px solid #ccc; margin-top: 5px; font-size: 15px;
+  }
+  button {
+    margin-top: 20px; padding: 12px; width: 100%;
+    background: #004080; color: white; border: none;
+    font-size: 16px; border-radius: 8px; cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+  button:hover { background: #0066cc; }
+
+  /* Responsive */
+  @media(max-width:768px){
+    .office-tabs { 
+      justify-content: center;
+      gap: 10px; 
+    }
+    .office-tab { 
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(0,64,128,0.95);
+      position: absolute;
+      top: 65px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+    #nav-menu.show { display: flex; }
+    .menu-icon { display: block; color: white; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <img src="images/logo.jpg" alt="Mars Logistics Logo" class="logo">
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="overlay">
+  <h1>Our Offices</h1>
+
+  <!-- Tabs -->
+  <div class="office-tabs">
+    <div class="office-tab active" data-office="nairobi">Nairobi (Head Office)</div>
+    <div class="office-tab" data-office="mombasa">Mombasa Office</div>
+  </div>
+
+  <!-- Nairobi Office -->
+  <div class="office-details" id="nairobi" style="display:block;">
+    <p><strong>Our Head Offices:</strong></p>
+    <p>Westlands Road, Nivina Towers, Nairobi, Kenya</p>
+    <p>(+254) 020 3341 114 | 0716 222 447</p>
+    <p>Email: <a href="mailto:info@marslogistics.com">info@marslogistics.com</a></p>
+    <iframe src="https://www.google.com/maps?q=Westlands+Road+Nivina+Towers+Nairobi&output=embed"></iframe>
+  </div>
+
+  <!-- Mombasa Office -->
+  <div class="office-details" id="mombasa">
+    <p><strong>Our Mombasa Offices:</strong></p>
+    <p>Suda Mombasa, Mombasa County</p>
+    <p>(+254) 0712 333 444</p>
+    <p>Email: <a href="mailto:info@marslogistics.com">info@marslogistics.com</a></p>
+    <iframe src="https://www.google.com/maps?q=Suda+Mombasa&output=embed"></iframe>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <label for="fname">First Name *</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+// Tabs functionality
+const tabs = document.querySelectorAll(".office-tab");
+const offices = document.querySelectorAll(".office-details");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    offices.forEach(o => o.style.display = "none");
+    document.getElementById(tab.dataset.office).style.display = "block";
+  });
+});
+
+// Hamburger menu toggle
+function toggleMenu() {
+  document.getElementById('nav-menu').classList.toggle('show');
+}
+
+// Mailto form submission
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById("fname").value);
+  const email = encodeURIComponent(document.getElementById("email").value);
+  const phone = encodeURIComponent(document.getElementById("phone").value);
+  const message = encodeURIComponent(document.getElementById("message").value);
+
+  const subject = encodeURIComponent("Contact Form Submission");
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
+
+  window.location.href = `mailto:info@marslogistics.com?subject=${subject}&body=${body}`;
+});
+</script>
+
+</body>
+</html>

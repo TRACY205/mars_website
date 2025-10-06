@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Mars Logistics Ltd</title>
+  <style>
+    /* ===== General Page Styling ===== */
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: url('images/log6.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    header { 
+      background: rgba(196, 225, 255, 0.95); 
+      color: #000; 
+      padding: 10px 20px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-container { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      flex-wrap: wrap;
+    }
+
+    .logo { 
+      height: 90px; 
+      border-radius: 8px;
+    }
+
+    nav { 
+      display: flex; 
+      align-items: center;
+    }
+
+    nav a { 
+      color: #000; 
+      margin: 0 10px; 
+      text-decoration: none; 
+      font-weight: 500; 
+      transition: color 0.3s;
+    }
+
+    nav a:hover { 
+      color: #004080; 
+    }
+
+    /* ===== Hamburger Menu ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      background: #000;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* ===== Main Content ===== */
+    main { 
+      max-width: 1000px; 
+      margin: 60px auto; 
+      background: rgba(255, 255, 255, 0.92);
+      padding: 40px 30px; 
+      border-radius: 15px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    h2, h3 { 
+      color: #004080; 
+      border-left: 5px solid #004080; 
+      padding-left: 10px; 
+      margin-top: 20px;
+    }
+
+    section { 
+      margin-bottom: 30px; 
+    }
+
+    /* ===== Footer ===== */
+    footer { 
+      text-align: center; 
+      padding: 20px; 
+      background: rgba(0, 0, 0, 0.8); 
+      color: white; 
+      font-size: 14px; 
+    }
+
+    footer a { 
+      color: #c4e1ff; 
+      text-decoration: none; 
+    }
+
+    footer a:hover { 
+      text-decoration: underline; 
+    }
+
+    /* ===== Responsive Styles ===== */
+    @media (max-width: 600px) {
+      .header-container {
+        flex-wrap: nowrap;
+      }
+
+      .logo {
+        height: 70px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(196, 225, 255, 0.97);
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px 0;
+        margin: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        font-size: 18px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      main {
+        margin: 30px 10px;
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      h3 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="images/logo.jpg" alt="Company Logo" class="logo">
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>
+        Established in 2010, <strong>Mars Logistics Limited</strong> has experienced steady growth in the transport, logistics, 
+        and clearing industry owing to our investment in state-of-the-art operational infrastructure and strategy.
+      </p>
+      <p>
+        Mars Logistics was founded by <strong>Mr. Bhavesh H. Gohil</strong>, a reputable logistics management professional 
+        with hands-on experience at all levels of operations within the logistics business.
+      </p>
+      <p>
+        Today, Mars Logistics serves key clients in both the private and public sectors. 
+        With a motivated and qualified staff, a modern fleet of vehicles equipped with on-board tracking systems, 
+        and an advanced communication system, we ensure prompt tracking and reporting.
+      </p>
+      <p>
+        Our current fleet includes <strong>70 skeleton trucks</strong> with plans to increase to 100 by the end of 2024. 
+        Our dedicated team of <strong>120 staff</strong> is also expected to double within the same period.
+      </p>
+
+      <h3>Our Commitment</h3>
+      <p>
+        We are committed to our customers, our staff, and the quality of our services.
+      </p>
+
+      <h3>Our Mission</h3>
+      <p>
+        To offer customer-oriented, quality, and timely transport and logistics services.
+      </p>
+    </section>
+
+    <section>
+      <h2>Directors’ Profile</h2>
+      <h3>Mr. Bhavesh H. Gohil – Chief Executive Officer</h3>
+      <p>
+        Mr. Gohil has over <strong>25 years of experience</strong> in logistics and supply chain management. 
+        He has worked for reputable firms such as <strong>Mombasa Salt Works Ltd (Dawda Group)</strong> 
+        and <strong>Maersk Logistics Ltd</strong> — a Danish multinational clearing and forwarding company. 
+        His areas of expertise include marketing and sales management, procurement, and fleet management. 
+        As CEO, he oversees the overall operations of the company.
+      </p>
+
+      <h3>Mrs. Dipti Gohil – Finance & Administration Director</h3>
+      <p>
+        Mrs. Gohil has over <strong>13 years of experience</strong> in the banking sector and possesses extensive 
+        expertise in finance and business administration. She currently serves as the Finance and 
+        Administration Director of Mars Logistics Limited.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Mars Logistics Limited</strong></p>
+    <p>P.O. Box 14477 – 00800 Nairobi – Kenya</p>
+    <p>
+      Tel: 
+      <a href="tel:+254708377377">+254 708 377 377</a> | 
+      <a href="tel:+254734377377">+254 734 377 377</a>
+    </p>
+    <p>Web: <a href="https://www.marslogistics.co.ke" target="_blank">www.marslogistics.co.ke</a></p>
+    <p>&copy; 2025 Mars Logistics Ltd. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== JavaScript for Menu Toggle ===== -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
