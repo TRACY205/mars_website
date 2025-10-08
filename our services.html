@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Logistics Ltd - Our Services</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fbff;
+      color: #333;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(90deg, #004aad, #0072ff);
+      color: white;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffde59;
+    }
+
+    /* ===== Hamburger Button ===== */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* ===== Hero ===== */
+    .services-hero {
+      background: url('https://images.pexels.com/photos/4484076/pexels-photo-4484076.jpeg?auto=compress&cs=tinysrgb&w=1400') center/cover no-repeat;
+      text-align: center;
+      color: white;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .services-hero h1,
+    .services-hero p,
+    .services-hero strong {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .services-hero p {
+      font-size: 1.2rem;
+    }
+
+    .services-hero strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffde59;
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Services Grid ===== */
+    .service-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .service-section h2 {
+      color: #004aad;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 0 0 25px 0;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      color: #004aad;
+      margin: 20px 0 10px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+      padding: 0 15px;
+      line-height: 1.6;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      background: linear-gradient(90deg, #004aad, #0072ff);
+      color: white;
+      padding: 70px 20px;
+      margin-top: 60px;
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: white;
+      color: #004aad;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #ffde59;
+      color: #002c66;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #002c66;
+      color: white;
+    }
+
+    footer a {
+      color: #e90932;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #004aad;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      nav a {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .services-hero h1 { font-size: 2.2rem; }
+      .services-hero p { font-size: 1rem; }
+      .services-hero strong { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.jpg" alt="Mars Logistics Logo" class="logo" />
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Our Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="services-hero">
+    <h1>Our Core Logistics Services</h1>
+    <p>Delivering reliability, efficiency, and innovation in every mile.</p>
+    <strong>We Make You Move.</strong>
+  </section>
+
+  <!-- Services -->
+  <section class="service-section">
+    <h2>What We Offer</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/4484077/pexels-photo-4484077.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Container Transport">
+        <h3>🚛 Container Transport</h3>
+        <p>Reliable road transport of containers across East Africa with real-time tracking and safety.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/6169661/pexels-photo-6169661.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clearing and Forwarding">
+        <h3>📦 Clearing & Forwarding</h3>
+        <p>Seamless import and export customs handling to ensure quick cargo movement through ports.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/4484075/pexels-photo-4484075.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cargo Tracking">
+        <h3>🛰 Cargo Tracking</h3>
+        <p>24/7 GPS cargo visibility for transparency, efficiency, and peace of mind during transit.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fleet Management">
+        <h3>🕒 Fleet Management</h3>
+        <p>Well-maintained and monitored fleet operations to ensure on-time deliveries and safety.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/3068190/pexels-photo-3068190.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cross Border Transport">
+        <h3>🌍 Cross-Border Transport</h3>
+        <p>Efficient cross-border logistics solutions connecting Kenya and Uganda.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/6169665/pexels-photo-6169665.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Special Cargo Handling">
+        <h3>🔒 Special Cargo Handling</h3>
+        <p>Secure transport and escort for valuable or oversized cargo handled by professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h3>Partner with Mars Logistics Today</h3>
+    <p>We’re here to move your business forward with dependable logistics you can trust.</p>
+    <a href="contact.html">Request a Quote</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Mars Logistics Limited</strong></p>
+    <p>P.O. Box 14477 – 00800 Nairobi – Kenya</p>
+    <p>
+      Tel: 
+      <a href="tel:+254708377377">+254 708 377 377</a> | 
+      <a href="tel:+254734377377">+254 734 377 377</a>
+    </p>
+    <p>
+      Web: <a href="https://www.marslogistics.co.ke" target="_blank">www.marslogistics.co.ke</a>
+    </p>
+    <p>&copy; 2025 Mars Logistics Ltd. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
