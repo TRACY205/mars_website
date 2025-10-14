@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mars Logistics Ltd - Our Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -116,7 +116,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== Services Grid ===== */
+    /* ===== Content Sections ===== */
     .service-section {
       max-width: 1200px;
       margin: 80px auto;
@@ -130,6 +130,15 @@
       margin-bottom: 40px;
     }
 
+    .service-section p {
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+      line-height: 1.8;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* ===== Services Grid ===== */
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -202,7 +211,7 @@
     footer {
       text-align: center;
       padding: 30px 20px;
-      background: #002c66;
+      background: #111;
       color: white;
     }
 
@@ -276,9 +285,22 @@
     <strong>We Make You Move.</strong>
   </section>
 
-  <!-- Services -->
+  <!-- OUR SERVICES -->
   <section class="service-section">
-    <h2>What We Offer</h2>
+    <h2>Our Services</h2>
+    <p>
+      Mars Logistics is primarily involved with road transport of containers across the Eastern Africa trading
+      block as well as clearing services approximately 400 containers a month. We are committed to developing
+      comprehensive service plans tailored to meet our customers’ specific requirements at the most cost-effective
+      service level. Owing to our flexibility and expertise, we continuously meet our customers’ requirements,
+      offering first-class, quality services more consistently than any other company.
+      <br><br>
+      Our services include but are not limited to: complete road haul service for import and export of containers
+      countrywide with offices in Mombasa, Nairobi, Malaba, Busia, Kampala, Congo, and Tanzania. Other
+      value-adding services include cross-docking services, long haul fleet from depots to and from ports,
+      cross-border transport and clearing, cargo planning and tracking, and special escort for valuable cargo.
+    </p>
+
     <div class="service-grid">
       <div class="service-card">
         <img src="images/log4.jpg" alt="Container Transport">
@@ -307,7 +329,7 @@
       <div class="service-card">
         <img src="images/log6.jpg" alt="Cross Border Transport">
         <h3>🌍 Cross-Border Transport</h3>
-        <p>Efficient cross-border logistics solutions connecting Kenya and Uganda.</p>
+        <p>Efficient cross-border logistics solutions connecting Kenya, Uganda, and Tanzania.</p>
       </div>
 
       <div class="service-card">
@@ -318,6 +340,31 @@
     </div>
   </section>
 
+  <!-- OPERATIONAL REVIEW -->
+  <section class="service-section" style="background:#f1f6ff;">
+    <h2>Operational Review</h2>
+    <p>
+      Mars Logistics headquarters is in Westlands on Westlands Road at Nivina Towers on the 4th Floor, and operates
+      several strategic satellite offices in Mombasa, Malaba, Busia, and Kampala. Mars Logistics operates a
+      state-of-the-art operational infrastructure and strategy. We have invested in on-board tracking systems which
+      provide management, staff, and clients with real-time information about every vehicle’s location.
+      <br><br>
+      Clients enjoy 24-hour communication access to their respective cargo drivers and receive tracking reports twice
+      daily. All vehicles are connected to in-house emergency response services for immediate assistance in case of
+      accidents or breakdowns. Each vehicle is also equipped with cell phones for efficient communication.
+      <br><br>
+      The Mombasa office handles all port operations including offloading of export cargo and loading of inland
+      deliveries. The port team comprises 10 staff led by <strong>Mr. Raphael Osodo</strong>, Head of Port Operations,
+      with over 15 years of logistics experience. Our workshop along the Nairobi–Mombasa Highway in Kokotoni–Mombasa
+      is managed by <strong>Mr. Sylvester Maturu</strong> and a team of 25 skilled mechanics, electricians, and
+      technicians dedicated to preventive maintenance 24/7.
+      <br><br>
+      With extensive experience in Kenya–Tanzania–Uganda cross-border operations and customs clearance, we ensure
+      fast, secure, and compliant cargo movement. <strong>Mr. Ibrahim Kassim</strong> leads all cross-border operations
+      with over 15 years of hands-on expertise.
+    </p>
+  </section>
+
   <!-- CTA -->
   <section class="cta">
     <h3>Partner with Mars Logistics Today</h3>
@@ -326,71 +373,56 @@
   </section>
 
   <!-- Footer -->
-  <!-- Include Font Awesome (in your <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <footer>
+    <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Mars Logistics Limited</p>
 
-<footer style="background-color: #111; color: white; padding: 30px 15px; text-align: center; font-family: Arial, sans-serif;">
-  
-  <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Mars Logistics Limited</p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px;">
+      <a href="https://www.google.com/maps?q=Nivina+Towers+Westlands+Road+Nairobi" target="_blank"
+         style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-location-dot" style="color: #f44336;"></i>
+        <span><strong>Head Office:</strong> Nivina Towers, Westlands Road, Nairobi</span>
+      </a>
 
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px;">
-    <!-- Head Office -->
-    <a href="https://www.google.com/maps?q=Nivina+Towers+Westlands+Road+Nairobi" target="_blank"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-location-dot" style="color: #f44336;"></i>
-      <span><strong>Head Office:</strong> Nivina Towers, Westlands Road, Nairobi</span>
-    </a>
+      <a href="https://www.google.com/maps?q=Mariakani+Mombasa+County" target="_blank"
+         style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-location-dot" style="color: #ff9800;"></i>
+        <span><strong>Branch Office:</strong> Mariakani, Mombasa County</span>
+      </a>
+    </div>
 
-    <!-- Branch Office -->
-    <a href="https://www.google.com/maps?q=Mariakani+Mombasa+County" target="_blank"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-location-dot" style="color: #ff9800;"></i>
-      <span><strong>Branch Office:</strong> Mariakani, Mombasa County</span>
-    </a>
-  </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; align-items: center; font-size: 15px;">
+      <a href="tel:+254708377377" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
+        <span>+254 708 377 377</span>
+      </a>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; align-items: center; font-size: 15px;">
+      <a href="tel:+254734377377" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
+        <span>+254 734 377 377</span>
+      </a>
 
-    <!-- Phone 1 -->
-    <a href="tel:+254708377377"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
-      <span>+254 708 377 377</span>
-    </a>
+      <a href="https://wa.me/254708377377" target="_blank"
+         style="color: #25D366; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat on WhatsApp</span>
+      </a>
 
-    <!-- Phone 2 -->
-    <a href="tel:+254734377377"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
-      <span>+254 734 377 377</span>
-    </a>
+      <a href="https://www.marslogistics.co.ke" target="_blank"
+         style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-globe" style="color: #03A9F4;"></i>
+        <span>www.marslogistics.co.ke</span>
+      </a>
+    </div>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/254708377377" target="_blank"
-       style="color: #25D366; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>Chat on WhatsApp</span>
-    </a>
-
-    <!-- Website -->
-    <a href="https://www.marslogistics.co.ke" target="_blank"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-globe" style="color: #03A9F4;"></i>
-      <span>www.marslogistics.co.ke</span>
-    </a>
-  </div>
-
-  <p style="margin-top: 15px; font-size: 14px; color: #bbb;">
-    &copy; 2025 Mars Logistics Ltd. All Rights Reserved.
-  </p>
-</footer>
-
+    <p style="margin-top: 15px; font-size: 14px; color: #bbb;">
+      &copy; 2025 Mars Logistics Ltd. All Rights Reserved.
+    </p>
+  </footer>
 
   <!-- Mobile Menu Script -->
   <script>
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('navbar');
-
     toggle.addEventListener('click', () => {
       nav.classList.toggle('active');
     });
