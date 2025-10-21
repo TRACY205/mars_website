@@ -65,7 +65,7 @@
     font-size: 2em;
   }
 
-  /* Tab-like office header */
+  /* Office tabs */
   .office-tabs {
     display: flex;
     justify-content: center;
@@ -115,38 +115,75 @@
 
   /* Contact form */
   .contact-form {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 50px auto;
     background: #fff;
-    padding: 30px;
+    padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
-  .contact-form h2 { text-align: center; color:#004080; margin-bottom: 20px; }
-  label { display:block; margin-top: 15px; font-weight: bold; }
+
+  .contact-form h2 {
+    text-align: center;
+    color:#004080;
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #004080;
+  }
+
   input, textarea {
-    width: 100%; padding: 10px; border-radius: 8px;
-    border: 1px solid #ccc; margin-top: 5px; font-size: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 5px rgba(0,64,128,0.3);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
   button {
-    margin-top: 20px; padding: 12px; width: 100%;
-    background: #004080; color: white; border: none;
-    font-size: 16px; border-radius: 8px; cursor: pointer;
+    margin-top: 10px;
+    padding: 14px;
+    width: 100%;
+    background: #004080;
+    color: white;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.1s;
   }
-  button:hover { background: #0066cc; }
+
+  button:hover {
+    background: #0066cc;
+    transform: scale(1.02);
+  }
 
   /* Responsive */
   @media(max-width:768px){
-    .office-tabs { 
-      justify-content: center;
-      gap: 10px; 
-    }
-    .office-tab { 
-      flex: 1 1 100%;
-      margin-bottom: 10px;
-    }
     #nav-menu {
       display: none;
       flex-direction: column;
@@ -197,53 +234,56 @@
   </div>
 
   <!-- Mombasa Office -->
-<div class="office-details" id="mombasa">
-  <p><strong>Our Mombasa Offices:</strong></p>
-  <p>Mariakani, Mombasa County</p>
-  <p>(+254) 0712 333 444</p>
-  <p>Email: <a href="mailto:info@marslogistics.com">info@marslogistics.com</a></p>
-  <iframe src="https://www.google.com/maps?q=Mariakani+Mombasa&output=embed"></iframe>
-</div>
-
+  <div class="office-details" id="mombasa">
+    <p><strong>Our Mombasa Offices:</strong></p>
+    <p>Mariakani, Mombasa County</p>
+    <p>(+254) 0712 333 444</p>
+    <p>Email: <a href="mailto:info@marslogistics.com">info@marslogistics.com</a></p>
+    <iframe src="https://www.google.com/maps?q=Mariakani+Mombasa&output=embed"></iframe>
+  </div>
 
   <!-- Contact Form -->
   <div class="contact-form">
     <h2>Contact Form</h2>
     <form id="contactForm">
-      <label for="fname">First Name *</label>
-      <input type="text" id="fname" name="fname" required>
+      <div>
+        <label for="fname">Full Name *</label>
+        <input type="text" id="fname" name="fname" required>
+      </div>
 
-      <label for="email">E-mail *</label>
-      <input type="email" id="email" name="email" required>
+      <div>
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-      <label for="phone">Phone *</label>
-      <input type="tel" id="phone" name="phone" required>
+      <div>
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
 
-      <label for="message">Your Message *</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <div>
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
 
       <button type="submit">Submit</button>
     </form>
   </div>
-
 </div>
 
-<!-- Include Font Awesome (in your <head>) -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <footer style="background-color: #111; color: white; padding: 30px 15px; text-align: center; font-family: Arial, sans-serif;">
-  
   <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">Mars Logistics Limited</p>
 
   <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px;">
-    <!-- Head Office -->
     <a href="https://www.google.com/maps?q=Nivina+Towers+Westlands+Road+Nairobi" target="_blank"
        style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-solid fa-location-dot" style="color: #f44336;"></i>
       <span><strong>Head Office:</strong> Nivina Towers, Westlands Road, Nairobi</span>
     </a>
 
-    <!-- Branch Office -->
     <a href="https://www.google.com/maps?q=Mariakani+Mombasa+County" target="_blank"
        style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-solid fa-location-dot" style="color: #ff9800;"></i>
@@ -252,31 +292,19 @@
   </div>
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; align-items: center; font-size: 15px;">
-
-    <!-- Phone 1 -->
-    <a href="tel:+254708377377"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <a href="tel:+254708377377" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
       <span>+254 708 377 377</span>
     </a>
-
-    <!-- Phone 2 -->
-    <a href="tel:+254734377377"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <a href="tel:+254734377377" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-solid fa-phone" style="color: #4CAF50;"></i>
       <span>+254 734 377 377</span>
     </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/254708377377" target="_blank"
-       style="color: #25D366; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <a href="https://wa.me/254708377377" target="_blank" style="color: #25D366; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-brands fa-whatsapp"></i>
       <span>Chat on WhatsApp</span>
     </a>
-
-    <!-- Website -->
-    <a href="https://www.marslogistics.co.ke" target="_blank"
-       style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <a href="https://www.marslogistics.co.ke" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;">
       <i class="fa-solid fa-globe" style="color: #03A9F4;"></i>
       <span>www.marslogistics.co.ke</span>
     </a>
@@ -288,7 +316,6 @@
 </footer>
 
 <script>
-// Tabs functionality
 const tabs = document.querySelectorAll(".office-tab");
 const offices = document.querySelectorAll(".office-details");
 
@@ -302,12 +329,10 @@ tabs.forEach(tab => {
   });
 });
 
-// Hamburger menu toggle
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('show');
 }
 
-// Mailto form submission
 const form = document.getElementById("contactForm");
 form.addEventListener("submit", function(e){
   e.preventDefault();
